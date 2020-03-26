@@ -4,11 +4,12 @@ import com.example.milliyetlab.ui.NewsFragment
 import com.example.milliyetlab.ui.model.FragmentModel
 
 object mockData {
-    fun getNewsCategoryFragment(fragmentSize: Int): List<FragmentModel> {
+    private const val newsCategorySize = 7
+    fun getNewsCategoryFragment(): List<FragmentModel> {
 
         val fragmentList = ArrayList<FragmentModel>()
 
-        repeat(fragmentSize) { position ->
+        repeat(newsCategorySize) { position ->
             val newsFragment = NewsFragment()
 
             val fragmentModel = FragmentModel(
@@ -34,7 +35,6 @@ object mockData {
             4 -> "Ekonomi"
             5 -> "Spor"
             6 -> "Eğitim"
-
 
             else -> ""
 
