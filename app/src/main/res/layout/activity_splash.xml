@@ -10,6 +10,6 @@
         android:layout_gravity="center"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="MilliyetApp"
+        android:text="@string/milliyetapp"
         android:textSize="16sp" />
 </FrameLayout>

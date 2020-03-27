@@ -13,7 +13,7 @@ class DashboardActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dashboard)
 
-
+        init()
     }
 
     private fun init() {
@@ -22,6 +22,6 @@ class DashboardActivity : AppCompatActivity() {
                 supportFragmentManager,
                 mockData.getNewsCategoryFragment()
             )
-        tabLayNewsCategory.setupWithViewPager(vpNewsCategory)
+        tabLayNewsCategory.setupWithViewPager(vpNewsCategory)//tablayouta viewpager eklemek icin setup kısmını kullanıyoruz
     }
 }

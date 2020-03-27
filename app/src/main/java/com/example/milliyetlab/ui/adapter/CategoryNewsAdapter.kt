@@ -17,7 +17,7 @@ class CategoryNewsAdapter(
     override fun getItem(position: Int): Fragment = newsFragmentList[position].fragment
 
 
-    override fun getPageTitle(position: Int): CharSequence? =
+    override fun getPageTitle(position: Int): CharSequence? = //tabloyout icin kullandık bu kısmı
         newsFragmentList[position].fragmentTitle
 
 

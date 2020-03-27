@@ -5,7 +5,6 @@ import android.os.CountDownTimer
 import androidx.appcompat.app.AppCompatActivity
 import com.example.milliyetlab.R
 import com.example.milliyetlab.ui.util.extStartActivity
-import kotlinx.android.synthetic.main.activity_splash.*
 
 class SplashActivity : AppCompatActivity() {
 
@@ -21,13 +20,7 @@ class SplashActivity : AppCompatActivity() {
 
             }
 
-            override fun onTick(millisUntilFinished: Long) {
-
-                txtCount.text = (millisUntilFinished / 1000).toString()
-
-            }
+            override fun onTick(millisUntilFinished: Long) {}
         }.start()
-
     }
-
 }

@@ -14,7 +14,7 @@ object mockData {
 
             val fragmentModel = FragmentModel(
                 position,
-                getFragmentTitle(position),
+                getTitleList()[position],
                 newsFragment
             )
 
@@ -25,19 +25,16 @@ object mockData {
         return fragmentList
     }
 
-    private fun getFragmentTitle(position: Int): String {
-        return when (position) {
-
-            0 -> "AnaSayfa"
-            1 -> "Yaxarlar"
-            2 -> "Gündem"
-            3 -> "Siyaset"
-            4 -> "Ekonomi"
-            5 -> "Spor"
-            6 -> "Eğitim"
-
-            else -> ""
-
-        }
+    private fun getTitleList(): List<String> {
+        val titleList = ArrayList<String>()
+        titleList.add("ANASAYFA")
+        titleList.add("YAZARLAR")
+        titleList.add("GÜNDEM")
+        titleList.add("EKONOMİ")
+        titleList.add("SPOR")
+        titleList.add("CADDE")
+        titleList.add("EĞİTİM")
+        titleList.add("TEKNOLOJİ")
+        return titleList
     }
 }
