@@ -1,6 +1,7 @@
 package com.example.milliyetlab.ui.mock
 
 import com.example.milliyetlab.ui.NewsFragment
+import com.example.milliyetlab.ui.model.BigNewsModel
 import com.example.milliyetlab.ui.model.FragmentModel
 
 object mockData {
@@ -36,5 +37,17 @@ object mockData {
         titleList.add("EĞİTİM")
         titleList.add("TEKNOLOJİ")
         return titleList
+    }
+
+    fun getNewsList(newsListSize: Int): List<BigNewsModel> {
+        val bigNewsList = ArrayList<BigNewsModel>()
+        repeat(newsListSize) {
+            val bigNewsModel = BigNewsModel(
+                "https://miro.medium.com/max/800/1*99YiKjwB2TliKVA-yGogNQ.png",
+                "Ertelendi! Kolay alınmış bir karar değil"
+            )
+            bigNewsList.add(bigNewsModel)
+        }
+        return bigNewsList
     }
 }

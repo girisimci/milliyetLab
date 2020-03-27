@@ -1,18 +1,20 @@
 package com.example.milliyetlab.ui
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.example.milliyetlab.R
+import com.example.milliyetlab.ui.adapter.NewsListAdapter
+import com.example.milliyetlab.ui.mock.mockData
+import kotlinx.android.synthetic.main.fragment_news.*
 
-class NewsFragment : Fragment() {
+class NewsFragment : Fragment(R.layout.fragment_news) {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_news, container, false)
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        recycNewsList.adapter = NewsListAdapter(mockData.getNewsList(10)) { bigNewsModel ->
+
+        }
     }
 }

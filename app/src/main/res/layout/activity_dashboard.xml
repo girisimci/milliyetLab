@@ -22,7 +22,7 @@
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:src="@drawable/milliyet_logo_white"></androidx.appcompat.widget.AppCompatImageView>
+                android:src="@drawable/milliyet_logo_white" />
 
         </androidx.appcompat.widget.Toolbar>
 
@@ -30,7 +30,9 @@
             android:id="@+id/tabLayNewsCategory"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:tabMode="fixed" />
+            app:tabMode="auto"
+            app:tabSelectedTextColor="@color/colorAccent"
+            app:tabTextColor="@color/nonSelectedText" />
     </com.google.android.material.appbar.AppBarLayout>
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/vpNewsCategory"
