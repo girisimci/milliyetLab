@@ -15,16 +15,8 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"
             android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme">
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:src="@drawable/milliyet_logo_white" />
-
-        </androidx.appcompat.widget.Toolbar>
+            android:theme="?attr/actionBarTheme" />
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabLayNewsCategory"

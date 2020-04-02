@@ -1,8 +1,9 @@
 package com.example.milliyetlab.ui.mock
 
 import com.example.milliyetlab.ui.NewsFragment
-import com.example.milliyetlab.ui.model.BigNewsModel
+import com.example.milliyetlab.ui.enums.NewsType
 import com.example.milliyetlab.ui.model.FragmentModel
+import com.example.milliyetlab.ui.model.NewsModel
 
 object mockData {
     private const val newsCategorySize = 7
@@ -39,15 +40,45 @@ object mockData {
         return titleList
     }
 
-    fun getNewsList(newsListSize: Int): List<BigNewsModel> {
-        val bigNewsList = ArrayList<BigNewsModel>()
+    fun getNewsList(newsListSize: Int): List<NewsModel> {
+        val newsList = ArrayList<NewsModel>()
         repeat(newsListSize) {
-            val bigNewsModel = BigNewsModel(
-                "https://miro.medium.com/max/800/1*99YiKjwB2TliKVA-yGogNQ.png",
-                "Ertelendi! Kolay alınmış bir karar değil"
+            val bigNewsModel = NewsModel(
+                "https://cdn.pixabay.com/photo/2015/04/22/19/35/photographing-children-735226_960_720.jpg",
+                "Ertelendi! Kolay alınmış bir karar değil",
+                NewsType.BIG_NEWS.id
             )
-            bigNewsList.add(bigNewsModel)
+            val smallNewsModel1 = NewsModel(
+                "https://cdn.pixabay.com/photo/2015/04/22/19/35/photographing-children-735226_960_720.jpg",
+                "ve miray dener açıkladı!!!!!!ve miray dener açıkladı!!!!!!ve miray dener açıkladı!!!!!!ve miray dener açıkladı!!!!!!\" ",
+                NewsType.SMALL_NEWS.id
+
+            )
+            val smallNewsModel2 = NewsModel(
+                "https://cdn.pixabay.com/photo/2015/04/22/19/35/photographing-children-735226_960_720.jpg",
+                "ve miray dener açıkladı!!!!!!ve miray dener açıkladı!!!!!!ve miray dener açıkladı!!!!!!ve miray dener açıkladı!!!!!!\" ",
+                NewsType.SMALL_NEWS.id
+
+            )
+            val smallNewsModel3 = NewsModel(
+                "https://cdn.pixabay.com/photo/2015/04/22/19/35/photographing-children-735226_960_720.jpg",
+                "ve miray dener açıkladı!!!!!!ve miray dener açıkladı!!!!!!ve miray dener açıkladı!!!!!!ve miray dener açıkladı!!!!!!\" ",
+                NewsType.SMALL_NEWS.id
+
+            )
+            val smallNewsModel4 = NewsModel(
+                "https://cdn.pixabay.com/photo/2015/04/22/19/35/photographing-children-735226_960_720.jpg",
+                "ve miray dener açıkladı!!!!!!ve miray dener açıkladı!!!!!!ve miray dener açıkladı!!!!!!ve miray dener açıkladı!!!!!!\" ",
+                NewsType.SMALL_NEWS.id
+
+            )
+            newsList.add(smallNewsModel1)
+            newsList.add(smallNewsModel2)
+            newsList.add(smallNewsModel3)
+            newsList.add(smallNewsModel4)
+            newsList.add(bigNewsModel)
+
         }
-        return bigNewsList
+        return newsList
     }
 }
