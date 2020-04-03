@@ -1,9 +1,7 @@
 package com.example.milliyetlab.ui.mock
 
-import com.example.milliyetlab.ui.NewsFragment
-import com.example.milliyetlab.ui.enums.NewsType
+import com.example.milliyetlab.ui.model.BaseNewsModel
 import com.example.milliyetlab.ui.model.FragmentModel
-import com.example.milliyetlab.ui.model.NewsModel
 
 object mockData {
     private const val newsCategorySize = 7
@@ -40,9 +38,15 @@ object mockData {
         return titleList
     }
 
-    fun getNewsList(newsListSize: Int): List<NewsModel> {
-        val newsList = ArrayList<NewsModel>()
+    fun getNewsList(newsListSize: Int): List<BaseNewsModel> {
+        val newsList = ArrayList<BaseNewsModel>()
         repeat(newsListSize) {
+
+            val adsModel = AdsModel(
+                AdSize.BANNER, "ca-app-pub-3940256099942544/6300978111",
+                NewsType.ADS_BANNER.id
+            )
+
             val bigNewsModel = NewsModel(
                 "https://cdn.pixabay.com/photo/2015/04/22/19/35/photographing-children-735226_960_720.jpg",
                 "Ertelendi! Kolay alınmış bir karar değil",
@@ -72,6 +76,7 @@ object mockData {
                 NewsType.SMALL_NEWS.id
 
             )
+            newsList.add(adsModel)
             newsList.add(smallNewsModel1)
             newsList.add(smallNewsModel2)
             newsList.add(smallNewsModel3)
