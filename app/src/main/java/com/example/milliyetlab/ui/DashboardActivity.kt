@@ -26,5 +26,6 @@ class DashboardActivity : AppCompatActivity() {
         tabLayNewsCategory.setupWithViewPager(vpNewsCategory)//tablayouta viewpager eklemek icin setup kısmını kullanıyoruz
 
         toolbar.logo = extGetDrawable(R.drawable.milliyet_logo_white)
+
     }
 }

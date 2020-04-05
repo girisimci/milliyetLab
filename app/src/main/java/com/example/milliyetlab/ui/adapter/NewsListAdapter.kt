@@ -2,6 +2,7 @@ package com.example.milliyetlab.ui.adapter
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.milliyetlab.ui.enums.NewsType
 import com.example.milliyetlab.ui.model.BaseNewsModel
 
 class NewsListAdapter(

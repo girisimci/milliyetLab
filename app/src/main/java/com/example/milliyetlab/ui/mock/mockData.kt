@@ -1,7 +1,12 @@
 package com.example.milliyetlab.ui.mock
 
+import com.example.milliyetlab.ui.NewsFragment
+import com.example.milliyetlab.ui.enums.NewsType
+import com.example.milliyetlab.ui.model.AdsModel
 import com.example.milliyetlab.ui.model.BaseNewsModel
 import com.example.milliyetlab.ui.model.FragmentModel
+import com.example.milliyetlab.ui.model.NewsModel
+import com.google.android.gms.ads.AdSize
 
 object mockData {
     private const val newsCategorySize = 7
@@ -43,7 +48,8 @@ object mockData {
         repeat(newsListSize) {
 
             val adsModel = AdsModel(
-                AdSize.BANNER, "ca-app-pub-3940256099942544/6300978111",
+                AdSize.BANNER,
+                "ca-app-pub-3940256099942544/6300978111",
                 NewsType.ADS_BANNER.id
             )
 
